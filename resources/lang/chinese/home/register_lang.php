@@ -1,38 +1,28 @@
 <?php
 
 $lang = [
-    're_disabled' => 'New user registration is not currently available.',
-    're_mail_text_part1' => 'Welcome to %s, thanks for joining our game!<br/> In this email you\'ll find all the information that you need to login into your account.',
-    're_mail_text_part2' => '<strong>Data to access the game</strong>',
-    're_mail_text_part3' => 'Your username',
-    're_mail_text_part4' => 'Your password',
-    're_mail_text_part5' => 'Game link',
-    're_mail_text_part6' => 'Enjoy the game!',
-    're_mail_text_part7' => 'Regards,<br/>The %s Team.-',
-    're_mail_register_at' => 'Joined to XG Proyect',
-    're_welcome_message_from' => 'Admin',
-    're_welcome_message_subject' => 'Welcome to XG Proyect!',
-    're_welcome_message_content' => 'Greetings, emperor %s!
+    're_disabled' => '新用户注册当前不可用。',
+    're_mail_text_part1' => '欢迎来到 %s，感谢您加入我们的游戏！<br/> 在这封邮件中，您将找到登录账户所需的所有信息。',
+    're_mail_text_part2' => '<strong>访问游戏的数据</strong>',
+    're_mail_text_part3' => '您的用户名',
+    're_mail_text_part4' => '您的密码',
+    're_mail_text_part5' => '游戏链接',
+    're_mail_text_part6' => '尽情享受游戏！',
+    're_mail_text_part7' => '此致，<br/>%s 团队',
+    're_mail_register_at' => '已加入 XG Proyect',
+    're_welcome_message_from' => '管理员',
+    're_welcome_message_subject' => '欢迎来到 XG Proyect！',
+    're_welcome_message_content' => '向您问候，%s 皇帝！
     <br/><br/>
-    I offer you the grandest of congratulations on entering into your regency and also I hope to be of help to you in your first steps.
+    我向您致以最诚挚的祝贺，祝贺您进入统治时代，我也希望能在您的初步阶段为您提供帮助。
     <br/><br/>
-    On the left, you will see the menu, which will help you to control the fortunes of your galactic empire.
+    在左侧，您将看到菜单，它将帮助您控制您的银河帝国的命运。
     <br/><br/>
-    I`m sure you already know the `overview`. Under `Resources` and `Facilities` you can build the constructions you need to support your empire. Get the best start by improving your Solar Plant, so that you acquire energy and can supply the mines with this energy.
+    我相信您已经了解"概览"了。在"资源"和"设施"下，您可以建造支持帝国所需的建筑。通过改进您的太阳能电站来获得最好的开始，这样您就能获得能量并为矿井提供能量。
     <br/><br/>
-    Subsequently, improve your metal and crystal mines to start producing the necessary resources. You can also just take a look around the menus, you will certainly be able to find your way around quite quickly.
+    随后，改进您的金属和水晶矿井，开始生产必要的资源。您也可以浏览一下菜单，相信您很快就能熟悉。
     <br/><br/>
-    More help, tips and tactics can be found here:
+    现在您已经为未来做好了充分准备 - 祝您好运！
     <br/><br/>
-    The tutorial: <a href="game.php?page=tutorial">tutorial</a><br/>
-    IRC Java chat: <a href="game.php?page=irc">IRC chat</a><br/>
-    The forum: <a href="game.php?page=forum">OGame boards</a><br/>
-    Support: <a href="game.php?page=support">game support</a><br/>
-    <br/><br/>
-
-    The latest announcements and changes in the game can only be found in the forum. There, on the bar at the top of the screen, you will find the `Chat` button. This takes you directly to the IRC chat. The channel selection list contains the #ogame-support channel, where you can ask questions directly. The Game Operator in charge of your Universe can also be found there.
-    <br/><br/>
-    Now you are fully armed for the future - good luck!
-    <br/><br/>
-    This message will be deleted in 24 hours.',
+    此消息将在 24 小时后删除。',
 ];
