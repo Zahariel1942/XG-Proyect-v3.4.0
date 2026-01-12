@@ -31,9 +31,9 @@
                         <td width="85" class="header">
                             <img src="{{ $dpath }}resources/deuterium.gif" width="42" height="22">
                         </td>
-                        <td width="85" class="header">
+                        <!-- <td width="85" class="header">
                             <img src="{{ $dpath }}resources/darkmatter.jpg" width="42" height="22" title="Dark Matter">
-                        </td>
+                        </td> -->
                         <td width="85" class="header">
                             <img src="{{ $dpath }}resources/energy.gif" width="42" height="22">
                         </td>
@@ -48,9 +48,9 @@
                         <td class="header" width="85">
                             <span style="font-weight:700;font-style: italic;">{{ $deuterium }}</span>
                         </td>
-                        <td class="header" width="85">
+                        <!-- <td class="header" width="85">
                             <span style="font-weight:700;font-style: italic;">{{ $dark_matter }}</span>
-                        </td>
+                        </td> -->
                         <td class="header" width="85">
                             <span style="font-weight:700;font-style: italic;">{{ $energy }}</span>
                         </td>
@@ -59,12 +59,12 @@
                         <td class="header" width="90">{!! $re_metal !!}</td>
                         <td class="header" width="90">{!! $re_crystal !!}</td>
                         <td class="header" width="90">{!! $re_deuterium !!}</td>
-                        <td class="header" width="90">{!! $re_darkmatter !!}</td>
+                        <!-- <td class="header" width="90">{!! $re_darkmatter !!}</td> -->
                         <td class="header" width="90">{!! $re_energy !!}</td>
                     </tr>
                 </table>
             </td>
-            <td class="header">
+            <!-- <td class="header">
                 <table class="header">
                     <tr class="header">
                         <td style="margin: 0 auto;" width="35px" class='header'>
@@ -94,7 +94,7 @@
                         </td>
                     </tr>
                 </table>
-            </td>
+            </td> -->
         </tr>
     </table>
     {!! $show_umod_notice !!}
