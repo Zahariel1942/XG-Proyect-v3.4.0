@@ -45,3 +45,8 @@ nbproject/
 #
 /vendor
 composer.lock
+
+#
+# Tailwindcss CLI
+#
+tailwindcss

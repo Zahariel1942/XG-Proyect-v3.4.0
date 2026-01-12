@@ -1,7 +1,7 @@
 <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
 
 <div id="header_top">
-    <table class="header" style="margin:0 auto">
+    <table class="header mx-auto">
         <tr class="header">
             <td class="header" style="width:5;">
                 <table class="header">
