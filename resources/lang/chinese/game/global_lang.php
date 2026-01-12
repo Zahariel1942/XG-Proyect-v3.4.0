@@ -2,60 +2,60 @@
 
 $lang = [
     // resources
-    'metal' => 'Metal',
-    'crystal' => 'Crystal',
-    'deuterium' => 'Deuterium',
-    'dark_matter' => 'Dark Matter',
-    'energy' => 'Energy',
+    'metal' => '金属',
+    'crystal' => '晶体',
+    'deuterium' => '重氢',
+    'dark_matter' => '暗物质',
+    'energy' => '能量',
 
     // types of planets or galaxy objects
     'planet_type' => [
-        1 => 'Planet',
-        2 => 'Debris',
-        3 => 'Moon',
+        1 => '行星',
+        2 => '残骸场',
+        3 => '卫星',
     ],
 
     // shortcuts
-    'dark_matter_short' => 'DM',
+    'dark_matter_short' => '暗物质',
     'planet_type_short' => [
-        1 => '(P)',
-        2 => '(D)',
-        3 => '(M)',
+        1 => '(行星)',
+        2 => '(残骸)',
+        3 => '(卫星)',
     ],
 
     // galaxy objects
-    'planet' => 'Planet',
-    'colony' => 'Colony',
-    'moon' => 'Moon',
+    'planet' => '行星',
+    'colony' => '殖民地',
+    'moon' => '卫星',
 
     // other
-    'write_message' => 'Write Message',
-    'homeworld' => 'Homeworld',
-    'module_not_accesible' => 'Page could not be found.',
-    'level' => 'Level ',
+    'write_message' => '发送讯息',
+    'homeworld' => '母星',
+    'module_not_accesible' => '页面未找到。',
+    'level' => '等级 ',
 
     // banning
-    'bg_banned' => '<br>YOUR ACCOUNT HAS BEEN SUSPENDED!<br><br><br>The suspension to the account will be removed on %s<br><br>',
+    'bg_banned' => '<br>您的账号已被封禁！<br><br><br>封禁将于 %s 解除<br><br>',
 
     // online status
-    'online' => 'Online',
-    'minutes' => '15 min',
-    'offline' => 'Offline',
+    'online' => '在线',
+    'minutes' => '15 分钟',
+    'offline' => '离线',
 
     'timing' => [
-        'year' => 'year',
-        'years' => 'years',
-        'month' => 'month',
-        'months' => 'months',
-        'week' => 'week',
-        'weeks' => 'weeks',
-        'day' => 'day',
-        'days' => 'days',
-        'hour' => 'hour',
-        'hours' => 'hours',
-        'minute' => 'minute',
-        'minutes' => 'minutes',
-        'second' => 'second',
-        'seconds' => 'seconds',
+        'year' => '年',
+        'years' => '年',
+        'month' => '月',
+        'months' => '月',
+        'week' => '周',
+        'weeks' => '周',
+        'day' => '天',
+        'days' => '天',
+        'hour' => '小时',
+        'hours' => '小时',
+        'minute' => '分钟',
+        'minutes' => '分钟',
+        'second' => '秒',
+        'seconds' => '秒',
     ],
 ];

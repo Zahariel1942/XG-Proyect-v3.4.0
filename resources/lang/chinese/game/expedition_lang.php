@@ -1,90 +1,90 @@
 <?php
 
 $lang = [
-    'exp_report_title' => 'Expedition Result %s', // ok
+    'exp_report_title' => '远征结果 %s',
 
     // found new ships
-    'exp_new_ships_1' => 'Our expedition found a planet which was almost destroyed during a certain chain of wars. There are different ships floating around in the orbit. The technicians are trying to repair some of them. Maybe we will also get information about what happened here.<br><br>The following ships are now part of the fleet:<br>%s', // ok
-    'exp_new_ships_2' => 'We came across the remains of a previous expedition! Our technicians will try to get some of the ships to work again.<br><br>The following ships are now part of the fleet:<br>%s', // ok
-    'exp_new_ships_3' => 'Our expedition ran into an old automatic shipyard. Some of the ships are still in the production phase and our technicians are currently trying to reactivate the yards energy generators.<br><br>The following ships are now part of the fleet:<br>%s', // ok
-    'exp_new_ships_4' => 'We found a deserted pirate station. There are some old ships lying in the hangar. Our technicians are figuring out whether some of them are still useful or not.<br><br>The following ships are now part of the fleet:<br>%s', // ok
-    'exp_new_ships_5' => 'Your expedition ran into the shipyards of a colony that was deserted eons ago. In the shipyards hangar they discover some ships that could be salvaged. The technicians are trying to get some of them to fly again.<br><br>The following ships are now part of the fleet:<br>%s', // ok
-    'exp_new_ships_6' => 'We found an enormous spaceship graveyard. Some of the technicians from the expedition fleet were able to get some of the ships to work again.<br><br>The following ships are now part of the fleet:<br>%s', // ok
-    'exp_new_ships_7' => 'We found the remains of an armada. The technicians directly went to the almost intact ships to try to get them to work again.<br><br>The following ships are now part of the fleet:<br>%s', // ok
+    'exp_new_ships_1' => '我们的远征队发现了一颗在某次战争链中几乎被摧毁的星球。轨道上漂浮着不同的舰船残骸。技术人员正在尝试修复其中一些。也许我们还能获得有关这里发生了什么的信息。<br><br>以下舰船现已加入舰队：<br>%s',
+    'exp_new_ships_2' => '我们遇到了之前远征队的遗迹！我们的技术人员将尝试让一些舰船重新运转。<br><br>以下舰船现已加入舰队：<br>%s',
+    'exp_new_ships_3' => '我们的远征队遇到了一个古老的自动化船坞。一些舰船仍在生产阶段，我们的技术人员正在尝试重新激活船坞的能量发生器。<br><br>以下舰船现已加入舰队：<br>%s',
+    'exp_new_ships_4' => '我们发现了一个废弃的海盗基地。机库中停放着一些旧舰船。我们的技术人员正在判断其中一些是否仍然有用。<br><br>以下舰船现已加入舰队：<br>%s',
+    'exp_new_ships_5' => '你们的远征队遇到了一个数千年前被遗弃的殖民地船坞。在船坞的机库中，他们发现了一些可以打捞的舰船。技术人员正在尝试让其中一些重新飞行。<br><br>以下舰船现已加入舰队：<br>%s',
+    'exp_new_ships_6' => '我们发现了一个巨大的太空船墓场。远征舰队的一些技术人员能够让其中一些舰船重新运转。<br><br>以下舰船现已加入舰队：<br>%s',
+    'exp_new_ships_7' => '我们发现了一支舰队的残骸。技术人员直接前往几乎完好无损的舰船，尝试让它们重新运转。<br><br>以下舰船现已加入舰队：<br>%s',
 
     // found resources
-    'exp_new_resources_1' => 'On an isolated planetoid we found some easily accessible resources fields and harvested some successfully.<br><br>%s %s have been captured.', // ok
-    'exp_new_resources_2' => 'Your expedition discovered a small asteroid from which some resources could be harvested.<br><br>%s %s have been captured.', // ok
-    'exp_new_resources_3' => 'Your expedition found an ancient, fully loaded but deserted freighter convoy. Some of the resources could be rescued.<br><br>%s %s have been captured.', // ok
-    'exp_new_resources_4' => 'On a tiny moon with its own atmosphere your expedition found some huge raw resources storage. The crew on the ground is trying to lift and load that natural treasure.<br><br>%s %s have been captured.', // ok
+    'exp_new_resources_1' => '在一颗孤立的小行星上，我们发现了一些易于开采的资源矿脉，并成功收获了一些。<br><br>已捕获 %s %s。',
+    'exp_new_resources_2' => '你们的远征队发现了一颗小行星，从中可以收获一些资源。<br><br>已捕获 %s %s。',
+    'exp_new_resources_3' => '你们的远征队发现了一支古老的、满载但已废弃的货运船队。一些资源可以被打捞。<br><br>已捕获 %s %s。',
+    'exp_new_resources_4' => '在一颗拥有自身大气层的小卫星上，你们的远征队发现了一些巨大的原始资源储藏。地面上的船员正在尝试提取并装载这些自然宝藏。<br><br>已捕获 %s %s。',
 
     // found primitive enemy
-    'exp_primitive_enemy_1' => 'Some primitive barbarians are attacking us with spaceships that can\'t even be named as such. If the fire gets serious we will be forced to fire back.', // ok
-    'exp_primitive_enemy_2' => 'That emergency signal that the expedition team followed was in reality an ambush set up by some Star Buccaneers. A fight could not be avoided.', // ok
-    'exp_primitive_enemy_3' => 'We caught some radio transmissions from some drunk pirates. Seems like we will be under attack soon.', // ok
-    'exp_primitive_enemy_4' => 'We needed to fight some pirates which were, fortunately, only a few.', // ok
-    'exp_primitive_enemy_5' => 'Some really desperate space pirates tried to capture our expedition fleet.', // ok
-    'exp_primitive_enemy_6' => 'The expedition reports tough battles against undefined pirate ships.', // ok
-    'exp_primitive_enemy_8' => 'We ran straight into an ambush set by some Star Buccaneers! A fight couldn\'t be avoided.', // ok
+    'exp_primitive_enemy_1' => '一些原始的野蛮人正用甚至不能称之为舰船的东西攻击我们。如果火力变得严重，我们将被迫还击。',
+    'exp_primitive_enemy_2' => '远征队跟踪的紧急信号实际上是一些星际海盗设下的陷阱。战斗在所难免。',
+    'exp_primitive_enemy_3' => '我们截获了一些醉酒海盗的无线电传输。看来我们很快就会遭到攻击。',
+    'exp_primitive_enemy_4' => '我们需要与一些海盗战斗，幸运的是他们的数量不多。',
+    'exp_primitive_enemy_5' => '一些真正绝望的太空海盗试图捕获我们的远征舰队。',
+    'exp_primitive_enemy_6' => '远征队报告与不明海盗舰船进行了激烈战斗。',
+    'exp_primitive_enemy_8' => '我们直接撞进了一些星际海盗设下的埋伏！战斗无法避免。',
 
     // found advanced enemy
-    'exp_advanced_enemy_1' => 'Some exotic looking ships attacked the expedition fleet without warning!', // ok
-    'exp_advanced_enemy_2' => 'Your expedition fleet had an unfriendly first contact with an unknown species.', // ok
+    'exp_advanced_enemy_1' => '一些外表奇特的舰船毫无预警地攻击了远征舰队！',
+    'exp_advanced_enemy_2' => '你们的远征舰队与一个未知物种进行了不友好的首次接触。',
 
     // found trader
-    'exp_trader' => 'Your expedition fleet made contact with a friendly alien race. They announced that they would send a representative with goods to trade to your worlds.', // ok
+    'exp_trader' => '你们的远征舰队与一个友好的外星种族建立了联系。他们宣布将派遣一名代表携带货物前往你们的世界进行贸易。',
 
     // found dark matter
-    'exp_dm_1' => 'The expedition followed some odd signals to an asteroid. In the asteroids core a small amount of Dark Matter was found. The asteroid was taken and the explorers are attempting to extract the Dark Matter.<br><br>Dark Matter %s have been captured.', // ok
-    'exp_dm_2' => 'Our expedition took over a ghost ship which was transporting a small amount of Dark Matter. We didn\'t find any hints of what happened to the original crew of the ship, but our technicians where able to rescue the Dark Matter.<br><br>Dark Matter %s have been captured.', // ok
-    'exp_dm_3' => 'We found the remains of an alien ship. We found a little container with some Dark Matter on a shelf in the Cargo hold!.<br><br>Dark Matter %s have been captured.', // ok
-    'exp_dm_4' => 'We met an odd alien on the shelf of a small ship who gave us a case with Dark Matter in exchange for some simple mathematical calculations.<br><br>Dark Matter %s have been captured.', // ok
-    'exp_dm_5' => 'The expedition was able to capture and store some Dark Matter.<br><br>Dark Matter %s have been captured.', // ok
+    'exp_dm_1' => '远征队跟踪一些奇怪的信号到达一颗小行星。在小行星核心发现了少量暗物质。小行星被带回，探险者正在尝试提取暗物质。<br><br>已捕获暗物质 %s。',
+    'exp_dm_2' => '我们的远征队接管了一艘运输少量暗物质的幽灵船。我们没有找到任何关于原船员发生了什么的线索，但我们的技术人员能够抢救暗物质。<br><br>已捕获暗物质 %s。',
+    'exp_dm_3' => '我们发现了一艘外星舰船的残骸。在货舱的架子上发现了一个装有暗物质的小容器！<br><br>已捕获暗物质 %s。',
+    'exp_dm_4' => '我们在一艘小船的架子上遇到了一个奇怪的外星人，他用一箱暗物质换取了一些简单的数学计算。<br><br>已捕获暗物质 %s。',
+    'exp_dm_5' => '远征队能够捕获并储存一些暗物质。<br><br>已捕获暗物质 %s。',
 
     // delay
-    'exp_delay_1' => 'Your expedition went into a sector full of particle storms. This set the energy stores to overload and most of the ships main systems crashed. Your mechanics where able to avoid the worst, but the expedition is going to return with a big delay.', // ok
-    'exp_delay_2' => 'Your navigator made a grave error in his computations that caused the expeditions jump to be miscalculated. Not only did the fleet miss the target completely, but the return trip will take a lot more time than originally planned.', // ok
-    'exp_delay_3' => 'The new navigation module is still buggy. The expeditions jump not only lead them in the wrong direction, but it used all the Deuterium fuel. Fortunately the fleets jump got them close to the departure planets moon. A bit disappointed the expedition now returns without impulse power. The return trip will take longer than expected.', // ok
-    'exp_delay_4' => 'For unknown reasons the expeditions jump went totally wrong. It nearly landed in the heart of a sun. Fortunately it landed in a known system, but the jump back is going to take longer than thought.', // ok
-    'exp_delay_5' => 'The solar wind of a red giant ruined the expeditions jump and it will take quite some time to calculate the return jump. There was nothing besides the emptiness of space between the stars in that sector. The fleet will return later than expected.', // ok
+    'exp_delay_1' => '你们的远征队进入了一个充满粒子风暴的星区。这导致能量存储过载，大多数舰船的主系统崩溃。你们的机械师能够避免最坏的情况，但远征队将大大延迟返回。',
+    'exp_delay_2' => '你们的导航员在计算中犯了一个严重错误，导致远征队的跃迁被错误计算。舰队不仅完全错过了目标，而且返程将比原计划花费更多时间。',
+    'exp_delay_3' => '新的导航模块仍然存在错误。远征队的跃迁不仅将他们带到了错误的方向，而且用尽了所有重氢燃料。幸运的是，舰队的跃迁使他们靠近了出发星球的卫星。船员们有些失望，现在在没有脉冲动力的情况下返回。返程将比预期的时间更长。',
+    'exp_delay_4' => '由于未知原因，远征队的跃迁完全出错了。它几乎降落在一颗恒星的中心。幸运的是它降落在一个已知的星系中，但返回跃迁将比想象的时间更长。',
+    'exp_delay_5' => '一颗红巨星的太阳风破坏了远征队的跃迁，需要相当长的时间来计算返回跃迁。在那个星区的恒星之间除了太空的空虚什么都没有。舰队将比预期晚返回。',
 
     // advancement
-    'exp_faster_1' => 'Your expeditions doesn\'t report any anomalies in the explored sector. But the fleet ran into somo solar wind while returning. This resulted in the return trip being expedited. Your expedition returns home a bit earlier.', // ok
-    'exp_faster_2' => 'An unexpected back coupling in the energy spools of the engines hastened the expeditions return, it returns home earlier than expected. First reports tell they do not have anything thrilling to account for.', // ok
+    'exp_faster_1' => '你们的远征队在探索的星区没有报告任何异常。但舰队在返回时遇到了一些太阳风。这导致返程加速。你们的远征队提前返回家园。',
+    'exp_faster_2' => '引擎能量线圈中的意外反向耦合加速了远征队的返回，它比预期的时间早返回家园。第一批报告称他们没有任何令人兴奋的事情要报告。',
 
     // found object
-    'exp_found_object_1' => 'A fleeing fleet left an item behind, in order to distract us in aid of their escape.<br><br>%s has been added to the inventory.', // ok
-    'exp_found_object_2' => 'Our fleet has found a valuable artefact.<br><br>%s has been added to the inventory.<br><br>%s has been added to the inventory.', // ok
+    'exp_found_object_1' => '一支逃跑的舰队留下了一件物品，以便分散我们的注意力帮助他们逃跑。<br><br>%s 已添加到库存。',
+    'exp_found_object_2' => '我们的舰队发现了一件有价值的神器。<br><br>%s 已添加到库存。<br><br>%s 已添加到库存。',
 
     // found nothing
-    'exp_nothing_1' => 'Your expedition took gorgeous pictures of a super nova. Nothing new could be obtained from the expedition, but at least there is good chance to win that "Best Picture Of The Universe" competition in next months issue of OGame magazine.', // ok
-    'exp_nothing_2' => 'A living being made out of pure energy came aboard and induced all the expedition members into some strange trance, causing them to only gazed at the hypnotizing patterns on the computer screens. When most of them finally snapped out of the hypnotic-like state, the expedition mission needed to be aborted as they had way too little Deuterium.', // ok
-    'exp_nothing_3' => 'Well, now we know that those red, class 5 anomalies do not only have chaotic effects on the ships navigation systems but also generate massive hallucination on the crew. The expedition didn\'t bring anything back.', // ok
-    'exp_nothing_4' => 'The expedition\'s flagship collided with a foreign ship when it jumped into the fleet without any warning. The foreign ship exploded and the damage to the flagship was substantial. The expedition cannot continue in these conditions, and so the fleet will begin to make its way back once the needed repairs have been carried out.', // ok
-    'exp_nothing_5' => 'Besides some quaint, small pets from a unknown marsh planet, this expedition brings nothing thrilling back from the trip.', // ok
-    'exp_nothing_6' => 'Our expedition team came across a strange colony that had been abandoned eons ago. After landing, our crew started to suffer from a high fever caused by an alien virus. It has been learned that this virus wiped out the entire civilization on the planet. Our expedition team is heading home to treat the sickened crew members. Unfortunately we had to abort the mission and we come home empty handed.', // ok
-    'exp_nothing_7' => 'A strange computer virus attacked the navigation system shortly after parting our home system. This caused the expedition fleet to fly in circles. Needless to say that the expedition wasn\'t really successful.', // ok
+    'exp_nothing_1' => '你们的远征队拍摄了一颗超新星的绚丽照片。虽然远征没有获得任何新东西，但至少有很大机会在下个月的 OGame 杂志"宇宙最佳照片"比赛中获胜。',
+    'exp_nothing_2' => '一种由纯能量构成的生命体登上飞船，让所有远征队成员陷入某种奇怪的恍惚状态，导致他们只是盯着电脑屏幕上催眠的图案。当大多数人最终从催眠状态中清醒过来时，由于重氢太少，远征任务不得不中止。',
+    'exp_nothing_3' => '好吧，现在我们知道那些红色的5级异常不仅对舰船的导航系统有混乱影响，而且还会对船员产生大规模幻觉。远征队没有带回任何东西。',
+    'exp_nothing_4' => '远征队的旗舰在一艘外国舰船毫无预警地跃入舰队时与其相撞。外国舰船爆炸，旗舰遭受重大损坏。在这种情况下，远征无法继续，因此舰队将在进行必要的维修后开始返程。',
+    'exp_nothing_5' => '除了来自未知沼泽星球的一些古怪的小宠物外，这次远征没有带回任何令人兴奋的东西。',
+    'exp_nothing_6' => '我们的远征队遇到了一个数千年前被遗弃的奇怪殖民地。着陆后，我们的船员开始因外星病毒而发高烧。据了解，这种病毒消灭了星球上的整个文明。我们的远征队正在返回家园治疗患病的船员。不幸的是，我们不得不中止任务，空手而归。',
+    'exp_nothing_7' => '在离开我们的母星系统后不久，一个奇怪的计算机病毒攻击了导航系统。这导致远征舰队在原地打转。不用说，远征并不是真正成功。',
     'exp_nothing_8' => '',
-    'exp_nothing_9' => 'A failure in the flagships reactor core nearly destroys the entire expedition fleet. Fortunately the technicians were more than competent and could avoid the worst. The repairs took quite some time and forced the expedition to return without having accomplished its goal.', // ok
-    'exp_nothing_10' => 'Despite the first, very promising scans of this sector, we unfortunately returned empty handed.', // ok
-    'exp_nothing_11' => 'Your expedition has learnt about the extensive emptiness of space. There was not even one small asteroid or radiation or particle that could have made this expedition interesting.', // ok
-    'exp_nothing_12' => 'Your expedition nearly ran into a neutron stars gravitation field and needed some time to free itself. Because of that a lot of Deuterium was consumed and the expedition fleet had to come back without any results.', // ok
-    'exp_nothing_13' => 'Due to a failure in the central computers of the flagship, the expedition mission had to be aborted. Unfortunately as a result of the computer malfunction, the fleet returns home empty handed.', // ok
-    'exp_nothing_14' => 'Your expedition picked up an emergency signal during the mission. A mega cargo vessel was caught by a powerful gravitation field generated by a planetoid. After the vessel and cargo was successfully freed, the captain announced that the person who saved them would be their favorite and exclusive client.', // ok
-    'exp_nothing_15' => 'Your expedition fleet followed odd signals for some time. At the end they noticed that those signals where being sent from an old probe which was sent out generations ago to greet foreign species. The probe was saved and some museums of your home planet already voiced their interest.', // ok
-    'exp_nothing_16' => 'The new and daring commander successfully traveled through an unstable wormhole to shorten the flight back! However, the expedition itself didn\'t bring anything new.', // ok
+    'exp_nothing_9' => '旗舰反应堆核心的故障几乎摧毁了整个远征舰队。幸运的是，技术人员非常称职，能够避免最坏的情况。维修花了相当长的时间，迫使远征队在没有完成目标的情况下返回。',
+    'exp_nothing_10' => '尽管对这个星区进行了最初非常有希望的扫描，但我们遗憾地空手而归。',
+    'exp_nothing_11' => '你们的远征队了解到了太空的广阔空虚。那里甚至没有一个小行星或辐射或粒子可以使这次远征变得有趣。',
+    'exp_nothing_12' => '你们的远征队几乎冲进了中子星的引力场，需要一些时间才能脱身。因此消耗了大量重氢，远征舰队不得不空手而归。',
+    'exp_nothing_13' => '由于旗舰中央计算机的故障，远征任务不得不中止。不幸的是，由于计算机故障，舰队空手而归。',
+    'exp_nothing_14' => '你们的远征队在任务期间接到了一个紧急信号。一艘大型货船被一颗小行星产生的强大引力场困住。在舰船和货物成功解放后，船长宣布救了他们的人将成为他们最喜欢和独家的客户。',
+    'exp_nothing_15' => '你们的远征舰队跟踪奇怪的信号一段时间。最后他们注意到这些信号是从一个古老的探测器发出的，该探测器在几代人之前被发送出去以迎接外星物种。探测器被打捞，你们母星球的一些博物馆已经表达了他们的兴趣。',
+    'exp_nothing_16' => '新的大胆的指挥官成功穿越了一个不稳定的虫洞以缩短返程飞行时间！然而，远征本身并没有带来任何新东西。',
 
     // lost ships
-    'exp_lost_1' => 'The only thing left from the expedition was the following radio transmission: Zzzrrt Oh no! Krrrzzzzt That zrrrtrzt looks krgzzzz like ... AHH! Krzzzzzzzztzzzz...<br><br><br><br><br><br>Transmission terminated', // ok
+    'exp_lost_1' => '远征队唯一留下的是以下无线电传输：滋滋滋 哦不！咔嗞嗞嗞 那个滋滋滋 看起来咔滋滋嗞 像是... 啊啊啊！咔滋滋滋滋滋滋滋滋...<br><br><br><br><br><br>传输中断',
     'exp_lost_2' => '',
 
     // exploration status
-    'exp_status_fresh_1' => 'Entry from the communications officers logbook: It seems that this part of the universe has not been explored yet.', // ok
-    'exp_status_fresh_2' => 'Entry from the communications officers logbook: It feels great to be the first ones traveling through an unexplored sector.', // ok
+    'exp_status_fresh_1' => '通讯官日志条目：似乎宇宙的这一部分尚未被探索。',
+    'exp_status_fresh_2' => '通讯官日志条目：成为第一批穿越未探索星区的人感觉真好。',
 
     // old lines
-    'exp_blackholl_1' => 'The fleet was sucked into a black hole is partially destroyed.',
-    'exp_blackholl_2' => 'The fleet was sucked into a black hole, and was completely destroyed!',
-    'exp_found_goods' => 'The fleet has discovered an unmanned spacecraft! <br> His scouts have recovered %s de %s, %s de %s, %s de %s y %s de %s.',
-    'exp_back_home' => 'Your expedition returned to the hangar.',
+    'exp_blackholl_1' => '舰队被吸入黑洞并部分摧毁。',
+    'exp_blackholl_2' => '舰队被吸入黑洞，完全被摧毁！',
+    'exp_found_goods' => '舰队发现了一艘无人驾驶的太空船！<br> 侦察兵已回收 %s %s，%s %s，%s %s 和 %s %s。',
+    'exp_back_home' => '你们的远征队返回了机库。',
 ];

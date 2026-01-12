@@ -1,6 +1,6 @@
 <?php
 
 $lang = [
-    'ch_version' => 'Version',
-    'ch_description' => 'Description',
+    'ch_version' => '版本',
+    'ch_description' => '描述',
 ];

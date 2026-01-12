@@ -1,7 +1,7 @@
 <?php
 
 $lang = [
-    'tn_vacation_mode' => 'Vacation mode active until ',
-    'tn_vacation_mode_active' => 'Vacation mode active',
-    'tn_delete_mode' => 'Your account was set for deletion. Deletion date: ',
+    'tn_vacation_mode' => '假期模式激活至 ',
+    'tn_vacation_mode_active' => '假期模式已激活',
+    'tn_delete_mode' => '您的账户已设置为删除。删除日期： ',
 ];

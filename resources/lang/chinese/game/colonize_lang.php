@@ -1,10 +1,10 @@
 <?php
 
 $lang = [
-    'col_max_colonies' => 'The fleet has arrived at assigned coordinates %s, but, unfortunately, can not colonize, can have no more than %s planets.',
-    'col_successful' => 'The fleet has arrived at assigned coordinates %s, found a new planet there and are beginning to develop upon it immediately.', // ok
-    'col_occupied' => 'The fleet has arrived at the assigned coordinates %s. Unfortunately, they found that the location has already been colonised. The disappointed settlers have to return home.', // ok
-    'col_astro_level' => 'The fleet has arrived at assigned coordinates %s and ascertains that the planet is viable for colonisation. Shortly after starting to develop the planet, the colonists realise that their knowledge of astrophysics is not sufficient to complete the colonisation of a new planet.', // ok
-    'col_report_from' => 'Settlers', // ok
-    'col_report_title' => 'Settlement Report', // ok
+    'col_max_colonies' => '舰队已抵达指定坐标 %s，但很遗憾，无法进行殖民，最多只能拥有 %s 个行星。',
+    'col_successful' => '舰队已抵达指定坐标 %s，在那里发现了一颗新星球并立即开始开发。', // ok
+    'col_occupied' => '舰队已抵达指定坐标 %s。不幸的是，他们发现该地点已经被殖民。失望的开拓者们不得不返回家园。', // ok
+    'col_astro_level' => '舰队已抵达指定坐标 %s 并确认该行星适合殖民。在开始开发行星后不久，殖民者们意识到他们的天体物理学知识不足以完成新行星的殖民。', // ok
+    'col_report_from' => '开拓者', // ok
+    'col_report_title' => '殖民报告', // ok
 ];

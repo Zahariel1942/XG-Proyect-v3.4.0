@@ -1,16 +1,16 @@
 <?php
 
 $lang = [
-    'defenses' => 'Defence',
-    'missiles' => 'Rockets',
-    'defense_rocket_launcher' => 'Rocket Launcher',
-    'defense_light_laser' => 'Light Laser',
-    'defense_heavy_laser' => 'Heavy Laser',
-    'defense_gauss_cannon' => 'Gauss Cannon',
-    'defense_ion_cannon' => 'Ion Cannon',
-    'defense_plasma_turret' => 'Plasma Turret',
-    'defense_small_shield_dome' => 'Small Shield Dome',
-    'defense_large_shield_dome' => 'Large Shield Dome',
-    'defense_anti-ballistic_missile' => 'Anti-Ballistic Missiles',
-    'defense_interplanetary_missile' => 'Interplanetary Missiles',
+    'defenses' => '防御',
+    'missiles' => '导弹',
+    'defense_rocket_launcher' => '火箭发射器',
+    'defense_light_laser' => '轻型激光炮',
+    'defense_heavy_laser' => '重型激光炮',
+    'defense_gauss_cannon' => '高斯炮',
+    'defense_ion_cannon' => '离子炮',
+    'defense_plasma_turret' => '等离子炮塔',
+    'defense_small_shield_dome' => '小型护盾穹顶',
+    'defense_large_shield_dome' => '大型护盾穹顶',
+    'defense_anti-ballistic_missile' => '反弹道导弹',
+    'defense_interplanetary_missile' => '星际导弹',
 ];

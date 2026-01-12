@@ -1,12 +1,12 @@
 <?php
 
 $lang = [
-    'des_report_title' => 'Moon attack', // ok
-    'des_report_start' => 'Your fleet from %s %s has arrived on the moon of the planet %s %s.', // ok
-    'des_report_defender' => 'The defender has failed to stop the destruction of the moon.',
-    'des_result_none' => 'The structure of the moon was not sufficiently weakened, and the fleet is returning to its home planet.', // ok
-    'des_result_moon' => 'The weapons of the deathstar fire an alternating graviton pshock at the moon, building up to a massive quake and finally tearing the satellite apart. All buildings on the moon were destroyed. A complete success!<br><br>The fleet is returning to its home planet.<br>', // ok
-    'des_result_ds' => 'The tremors began to shake the surface of the moon, but something goes wrong, the Death Stars graviton also causes tremors making the Death Stars blow into thousand of pieces.',
-    'des_result_both' => 'Your deathstar aim its alternating graviton pshock cannon at the satellite. At first, light quakes incresingly build up on the surface of the moon. The moon begins to deform and is torn apart. Gigantic chunks of rubble come flying towards your fleet. It is too late to evade them. Your entire fleet is obliterated in a hail of rubble.', // ok
-    'des_moon_ds_chances' => 'Moon destruction chance: %d %%, DS destruction chance:%d %%', // ok
+    'des_report_title' => '月球攻击',
+    'des_report_start' => '您的舰队从 %s %s 抵达了行星 %s %s 的卫星。',
+    'des_report_defender' => '防守者未能阻止对卫星的摧毁。',
+    'des_result_none' => '卫星的结构没有被充分削弱，舰队正在返回母星。',
+    'des_result_moon' => '死星的武器向卫星发射了交替式引力冲击，引发了大规模地震，最终将卫星撕裂。卫星上的所有建筑均被摧毁。大获全胜！<br><br>舰队正在返回母星。<br>',
+    'des_result_ds' => '震动开始摇撼卫星表面，但出现了问题，死星的引力子也引发了震动，使得死星爆炸成千万碎片。',
+    'des_result_both' => '您的死星将其交替式引力冲击炮对准了卫星。起初，微弱的震动在卫星表面逐渐增强。卫星开始变形并被撕裂。巨大的碎片飞向您的舰队。已经来不及躲避。您的整支舰队在碎片雨中被摧毁。',
+    'des_moon_ds_chances' => '卫星摧毁几率: %d %%，死星摧毁几率:%d %%',
 ];
