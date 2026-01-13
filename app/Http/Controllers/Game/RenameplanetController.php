@@ -80,7 +80,8 @@ class RenameplanetController extends BaseController
     {
         $new_name = strip_tags(trim($new_name));
 
-        if (preg_match("/[^A-z0-9_\- ]/", $new_name) == 1) {
+        // Allow alphanumeric characters, underscores, hyphens, spaces, and Unicode characters (including Chinese)
+        if (preg_match("/[^A-z0-9_\- \p{L}\p{N}]/u", $new_name) == 1) {
             Functions::message($this->langs->line('rp_newname_error'), 'game.php?page=renameplanet', 2);
         }
 
