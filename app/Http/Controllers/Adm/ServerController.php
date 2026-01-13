@@ -291,7 +291,7 @@ class ServerController extends BaseController
     {
         $options = '';
 
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 0; $i <= 20; $i++) {
             $selected = '';
 
             if ($i * 10 == $current_percentage) {
