@@ -217,7 +217,7 @@ class SearchController extends BaseController
             '#',
             Functions::setImage(DPATH . '/img/b.gif', $this->langs->line('sh_tip_buddy_request')),
             $this->langs->line('sh_tip_apply'),
-            'onClick="f(\'game.php?page=buddies&mode=2&u=' . $user_id . '\', \'' . $this->langs->line('sh_tip_buddy_request') . '\')"'
+            'onClick="openPopupWindow(\'game.php?page=buddies&mode=2&u=' . $user_id . '\', \'' . $this->langs->line('sh_tip_buddy_request') . '\')"'
         );
 
         return $chatLink . ' ' . $buddyLink;

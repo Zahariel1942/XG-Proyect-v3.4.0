@@ -134,7 +134,7 @@
                                     {notes_list}
                                     <tr>
                                         <th colspan="4">
-                                            <a href="#" onclick="f('game.php?page=notes&a=2&n={note_id}', 'Notes')">
+                                            <a href="#" onclick="openPopupWindow('game.php?page=notes&a=2&n={note_id}', 'Notes')">
                                                 <font color="{note_color}">{note_title}</font>
                                             </a>
                                         </th>

@@ -794,7 +794,7 @@ class Attack extends Missions
     private function buildReportLink($color, $rid, $target_planet_name, $g, $s, $p)
     {
         $style = 'style="color:' . $color . ';"';
-        $js = "OnClick=\'f(\"game.php?page=combatreport&report=" . $rid . "\", \"\");\'";
+        $js = "OnClick=\'openPopupWindow(\"game.php?page=combatreport&report=" . $rid . "\", \"\");\'";
         $content = sprintf($this->langs->line('at_report_title'), $target_planet_name, FormatLib::prettyCoords($g, $s, $p));
 
         return UrlHelper::setUrl(

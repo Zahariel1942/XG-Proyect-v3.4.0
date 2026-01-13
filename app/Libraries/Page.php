@@ -602,7 +602,7 @@ class Page
 
             // POP UP OR NOT
             if ($data[4] == 'true') {
-                $link_type = '<a href="#" onClick="f(\'' . $link . '\', \'' . $data[1] . '\')">
+                $link_type = '<a href="#" onClick="openPopupWindow(\'' . $link . '\', \'' . $data[1] . '\')">
                     <font color="' . (($data[3] != 'FFF') ? $data[3] : '') . '">' . $data[1] . '</font></a>';
             } else {
                 $link_type = '<a href="' . $link . '">

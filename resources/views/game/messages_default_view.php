@@ -1,10 +1,3 @@
-<script language="JavaScript">
-    function f(target_url, win_name) {
-        var new_win = window.open(target_url, win_name, 'resizable=yes,scrollbars=yes,menubar=no,toolbar=no,width=800,height=600,top=0,left=0');
-        new_win.focus();
-    }
-</script>
-<br />
 <div id="content">
     <form action="game.php?page=messages" method="post">
         <table width="519">

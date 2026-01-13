@@ -249,7 +249,7 @@ class MovementController extends BaseController
 
             if ($fleet->getFleetMission() == Missions::ATTACK) {
                 $content = '<input type="button" value="' . $this->langs->line('fl_acs') . '">';
-                $attributes = 'onClick="f(\'game.php?page=federationlayer&fleet=' . $fleet->getFleetId() . '\', \'\')"';
+                $attributes = 'onClick="openPopupWindow(\'game.php?page=federationlayer&fleet=' . $fleet->getFleetId() . '\', \'\')"';
 
                 $actions .= UrlHelper::setUrl('#', $content, '', $attributes);
             }
