@@ -43,7 +43,7 @@ class Statistics extends Model
                     SELECT
                         COUNT(user_id) AS `ally_members`
                     FROM `' . USERS . '`
-                    WHERE `user_ally_id` = a.`alliance_id`
+                    WHERE `user_ally_id` = a.`alliance_id` AND `user_is_bot` = 0
                 ) AS `ally_members`
             FROM `' . ALLIANCE_STATISTICS . '` AS s
             INNER JOIN  `' . ALLIANCE . '` AS a ON a.`alliance_id` = s.`alliance_statistic_alliance_id`
@@ -71,7 +71,7 @@ class Statistics extends Model
             FROM `' . USERS_STATISTICS . '` as s
             INNER JOIN `' . USERS . '` as u ON u.`user_id` = s.`user_statistic_user_id`
             LEFT JOIN `' . ALLIANCE . '` AS a ON a.`alliance_id` = u.`user_ally_id`
-            WHERE `user_authlevel` <= ' . Functions::readConfig('stat_admin_level') . '
+            WHERE `user_authlevel` <= ' . Functions::readConfig('stat_admin_level') . ' AND u.`user_is_bot` = 0
             ORDER BY `user_statistic_' . $order . '` DESC, `user_statistic_total_rank` ASC
             LIMIT ' . $start . ',100;'
         );

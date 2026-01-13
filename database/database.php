@@ -421,6 +421,7 @@ $tables['users'] = "CREATE TABLE `" . USERS . "` (
 `user_ally_register_time` int(11) NOT NULL DEFAULT '0',
 `user_ally_rank_id` int(11) NOT NULL DEFAULT '0',
 `user_banned` int(11) NOT NULL DEFAULT '0',
+`user_is_bot` tinyint(1) NOT NULL DEFAULT '0',
 PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;";
 
