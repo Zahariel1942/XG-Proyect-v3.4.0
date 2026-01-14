@@ -3,6 +3,7 @@
 namespace App\Models\Libraries;
 
 use App\Core\Model;
+use App\Core\Objects;
 
 class UpdatesLibrary extends Model
 {
@@ -203,5 +204,195 @@ class UpdatesLibrary extends Model
                 WHERE `planet_id` = '" . $data['planet']['planet_id'] . "';"
             );
         }
+    }
+
+    /**
+     * Get all bot users
+     *
+     * @return array
+     */
+    public function getBotUsers()
+    {
+        return $this->db->queryFetchAll(
+            'SELECT `user_id`, `user_onlinetime` FROM `' . USERS . '` WHERE `user_is_bot` = 1'
+        );
+    }
+
+    /**
+     * Get max building levels from non-bot users
+     *
+     * @return array
+     */
+    public function getMaxBuildings()
+    {
+        $buildings = Objects::getInstance()->getObjects();
+        $max_buildings = [];
+
+        foreach ($buildings as $building_id => $building_name) {
+            if (in_array($building_id, [1, 2, 3, 4, 12, 14, 15, 21, 22, 23, 24, 31])) { // Example building IDs
+                $result = $this->db->queryFetch(
+                    'SELECT MAX(`' . $building_name . '`) as max_level FROM `' . BUILDINGS . '` b
+                    INNER JOIN `' . PLANETS . '` p ON p.planet_id = b.building_planet_id
+                    INNER JOIN `' . USERS . '` u ON u.user_id = p.planet_user_id
+                    WHERE u.user_is_bot = 0'
+                );
+                $max_buildings[$building_name] = $result['max_level'] ?? 0;
+            }
+        }
+
+        return $max_buildings;
+    }
+
+    /**
+     * Get max ship counts from non-bot users
+     *
+     * @return array
+     */
+    public function getMaxShips()
+    {
+        $ships = Objects::getInstance()->getObjects();
+        $max_ships = [];
+
+        foreach ($ships as $ship_id => $ship_name) {
+            if ($ship_id >= 202 && $ship_id <= 215) { // Ship IDs
+                $result = $this->db->queryFetch(
+                    'SELECT MAX(`' . $ship_name . '`) as max_count FROM `' . SHIPS . '` s
+                    INNER JOIN `' . PLANETS . '` p ON p.planet_id = s.ship_planet_id
+                    INNER JOIN `' . USERS . '` u ON u.user_id = p.planet_user_id
+                    WHERE u.user_is_bot = 0'
+                );
+                $max_ships[$ship_name] = $result['max_count'] ?? 0;
+            }
+        }
+
+        return $max_ships;
+    }
+
+    /**
+     * Get max research levels from non-bot users
+     *
+     * @return array
+     */
+    public function getMaxResearch()
+    {
+        $research = Objects::getInstance()->getObjects();
+        $max_research = [];
+
+        foreach ($research as $research_id => $research_name) {
+            if ($research_id >= 106 && $research_id <= 123) { // Research IDs
+                $result = $this->db->queryFetch(
+                    'SELECT MAX(`' . $research_name . '`) as max_level FROM `' . RESEARCH . '` WHERE `research_user_id` IN (
+                        SELECT `user_id` FROM `' . USERS . '` WHERE `user_is_bot` = 0
+                    )'
+                );
+                $max_research[$research_name] = $result['max_level'] ?? 0;
+            }
+        }
+
+        return $max_research;
+    }
+
+    /**
+     * Get max defense counts from non-bot users
+     *
+     * @return array
+     */
+    public function getMaxDefenses()
+    {
+        $defenses = Objects::getInstance()->getObjects();
+        $max_defenses = [];
+
+        foreach ($defenses as $defense_id => $defense_name) {
+            if (($defense_id >= 401 && $defense_id <= 408) || $defense_id == 502 || $defense_id == 503) { // Defense IDs
+                $result = $this->db->queryFetch(
+                    'SELECT MAX(`' . $defense_name . '`) as max_count FROM `' . DEFENSES . '` d
+                    INNER JOIN `' . PLANETS . '` p ON p.planet_id = d.defense_planet_id
+                    INNER JOIN `' . USERS . '` u ON u.user_id = p.planet_user_id
+                    WHERE u.user_is_bot = 0'
+                );
+                $max_defenses[$defense_name] = $result['max_count'] ?? 0;
+            }
+        }
+
+        return $max_defenses;
+    }
+
+    /**
+     * Update bot user data
+     *
+     * @param int $user_id
+     * @param array $buildings
+     * @param array $ships
+     * @param array $research
+     * @param array $defenses
+     * @return void
+     */
+    public function updateBotData($user_id, $buildings, $ships, $research, $defenses)
+    {
+        // Update buildings for all planets of the bot
+        $building_query = '';
+        foreach ($buildings as $building => $level) {
+            $building_query .= '`' . $building . '` = ' . $level . ', ';
+        }
+        $building_query = rtrim($building_query, ', ');
+
+        $this->db->query(
+            'UPDATE `' . BUILDINGS . '` b
+            INNER JOIN `' . PLANETS . '` p ON p.planet_id = b.building_planet_id
+            SET ' . $building_query . '
+            WHERE p.planet_user_id = ' . $user_id
+        );
+
+        // Update ships for all planets of the bot
+        $ship_query = '';
+        foreach ($ships as $ship => $count) {
+            $ship_query .= '`' . $ship . '` = ' . $count . ', ';
+        }
+        $ship_query = rtrim($ship_query, ', ');
+
+        $this->db->query(
+            'UPDATE `' . SHIPS . '` s
+            INNER JOIN `' . PLANETS . '` p ON p.planet_id = s.ship_planet_id
+            SET ' . $ship_query . '
+            WHERE p.planet_user_id = ' . $user_id
+        );
+
+        // Update defenses for all planets of the bot
+        $defense_query = '';
+        foreach ($defenses as $defense => $count) {
+            $defense_query .= '`' . $defense . '` = ' . $count . ', ';
+        }
+        $defense_query = rtrim($defense_query, ', ');
+
+        $this->db->query(
+            'UPDATE `' . DEFENSES . '` d
+            INNER JOIN `' . PLANETS . '` p ON p.planet_id = d.defense_planet_id
+            SET ' . $defense_query . '
+            WHERE p.planet_user_id = ' . $user_id
+        );
+
+        // Update research
+        $research_query = '';
+        foreach ($research as $res => $level) {
+            $research_query .= '`' . $res . '` = ' . $level . ', ';
+        }
+        $research_query = rtrim($research_query, ', ');
+
+        $this->db->query(
+            'UPDATE `' . RESEARCH . '` SET ' . $research_query . ' WHERE `research_user_id` = ' . $user_id
+        );
+    }
+
+    /**
+     * Update bot user online time
+     *
+     * @param int $user_id
+     * @return void
+     */
+    public function updateBotOnlineTime($user_id)
+    {
+        $this->db->query(
+            'UPDATE `' . USERS . '` SET `user_onlinetime` = ' . time() . ' WHERE `user_id` = ' . $user_id
+        );
     }
 }
