@@ -77,6 +77,7 @@ class MakerController extends BaseController
             $system = (int) $_POST['system'];
             $planet = (int) $_POST['planet'];
             $auth = (int) $_POST['authlevel'];
+            $is_bot = isset($_POST['is_bot']) ? true : false;
             $i = 0;
             $error = '';
 
@@ -127,7 +128,7 @@ class MakerController extends BaseController
             }
 
             if ($i == 0) {
-                $this->makerModel->createNewUser($name, $email, $auth, $pass, $galaxy, $system, $planet);
+                $this->makerModel->createNewUser($name, $email, $auth, $pass, $galaxy, $system, $planet, $is_bot);
 
                 $this->alert = Administration::saveMessage('ok', strtr($this->langs->line('mk_user_added'), ['%s' => $pass]));
             } else {

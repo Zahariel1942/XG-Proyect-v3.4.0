@@ -64,6 +64,10 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>{mk_user_is_bot}</td>
+                                        <td><input class="form-input-check" type="checkbox" name="is_bot"></td>
+                                    </tr>
                                 </table>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-icon-split">

@@ -127,7 +127,7 @@ class Maker extends Model
      * @param integer $planet
      * @return void
      */
-    public function createNewUser(string $name, string $email, int $auth, string $pass, int $galaxy, int $system, int $planet): void
+    public function createNewUser(string $name, string $email, int $auth, string $pass, int $galaxy, int $system, int $planet, bool $is_bot = false): void
     {
         try {
             $time = time();
@@ -143,6 +143,7 @@ class Maker extends Model
                     `user_register_time` = '" . $time . "',
                     `user_onlinetime` = '" . $time . "',
                     `user_authlevel` = '" . $auth . "',
+                    `user_is_bot` = '" . (int) $is_bot . "',
                     `user_password` = '" . Functions::hash($pass) . "';"
             );
 

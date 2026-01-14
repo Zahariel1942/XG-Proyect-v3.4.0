@@ -42,6 +42,7 @@ $lang = [
     'mk_user_level' => 'Nivel del usuario',
     'mk_user_coords' => 'Coordenadas',
     'mk_user_add_user' => 'Agregar Usuario',
+    'mk_user_is_bot' => 'Is bot?',
     'mk_user_only_numbers' => 'Sólo números<br>',
     'mk_user_wrong_coords' => '¡Coordenadas erroneas!<br>',
     'mk_user_complete_all' => 'Debes completar todos los campos<br>',

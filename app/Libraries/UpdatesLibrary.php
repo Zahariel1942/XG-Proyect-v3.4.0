@@ -29,6 +29,7 @@ class UpdatesLibrary
         // Updates
         $this->updateFleets();
         $this->updateStatistics();
+        $this->updateBots();
     }
 
     /**
@@ -141,6 +142,54 @@ class UpdatesLibrary
             $result = new StatisticsLibrary();
 
             Functions::updateConfig('stat_last_update', $result->makeStats()['stats_time']);
+        }
+    }
+
+    /**
+     * updateBots
+     *
+     * @return void
+     */
+    private function updateBots()
+    {
+        $bot_users = $this->updatesModel->getBotUsers();
+
+        foreach ($bot_users as $bot) {
+            // Check if user_onlinetime is more than 2 hours ago
+            if ($bot['user_onlinetime'] < (time() - 7200)) {
+                // Get max values from non-bot users
+                $max_buildings = $this->updatesModel->getMaxBuildings();
+                $max_ships = $this->updatesModel->getMaxShips();
+                $max_research = $this->updatesModel->getMaxResearch();
+                $max_defenses = $this->updatesModel->getMaxDefenses();
+
+                // Calculate 80% and ceil
+                $bot_buildings = [];
+                foreach ($max_buildings as $building => $max_level) {
+                    $bot_buildings[$building] = ceil($max_level * 0.8);
+                }
+
+                $bot_ships = [];
+                foreach ($max_ships as $ship => $max_count) {
+                    $bot_ships[$ship] = ceil($max_count * 0.8);
+                }
+
+                $bot_research = [];
+                foreach ($max_research as $research => $max_level) {
+                    $bot_research[$research] = ceil($max_level * 0.8);
+                }
+
+                $bot_defenses = [];
+                foreach ($max_defenses as $defense => $max_count) {
+                    $bot_defenses[$defense] = ceil($max_count * 0.8);
+                }
+
+                // Update bot data
+                $this->updatesModel->updateBotData($bot['user_id'], $bot_buildings, $bot_ships, $bot_research, $bot_defenses);
+
+                // Update user_onlinetime to prevent repeated updates
+                $this->updatesModel->updateBotOnlineTime($bot['user_id']);
+            }
         }
     }
 
