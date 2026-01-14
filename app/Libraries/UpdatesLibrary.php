@@ -155,8 +155,8 @@ class UpdatesLibrary
         $bot_users = $this->updatesModel->getBotUsers();
 
         foreach ($bot_users as $bot) {
-            // Check if user_onlinetime is more than 2 hours ago
-            if ($bot['user_onlinetime'] < (time() - 7200)) {
+            // Check if user_onlinetime is more than 2 days ago
+            if ($bot['user_onlinetime'] < (time() - 2 * 24 * 60 * 60)) {
                 // Get max values from non-bot users
                 $max_buildings = $this->updatesModel->getMaxBuildings();
                 $max_ships = $this->updatesModel->getMaxShips();
