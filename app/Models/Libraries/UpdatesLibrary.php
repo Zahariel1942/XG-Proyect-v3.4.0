@@ -234,7 +234,7 @@ class UpdatesLibrary extends Model
                     'SELECT MAX(`' . $building_name . '`) as max_level FROM `' . BUILDINGS . '` b
                     INNER JOIN `' . PLANETS . '` p ON p.planet_id = b.building_planet_id
                     INNER JOIN `' . USERS . '` u ON u.user_id = p.planet_user_id
-                    WHERE u.user_is_bot = 0'
+                    WHERE u.user_is_bot = 0 AND p.planet_type = 1'
                 );
                 $max_buildings[$building_name] = $result['max_level'] ?? 0;
             }
@@ -340,7 +340,7 @@ class UpdatesLibrary extends Model
             'UPDATE `' . BUILDINGS . '` b
             INNER JOIN `' . PLANETS . '` p ON p.planet_id = b.building_planet_id
             SET ' . $building_query . '
-            WHERE p.planet_user_id = ' . $user_id
+            WHERE p.planet_user_id = ' . $user_id . ' AND p.planet_type = 1'
         );
 
         // Update ships for all planets of the bot
