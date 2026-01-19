@@ -331,7 +331,7 @@ h1
 }
 
 
-#content {
+/* #content {
 	position:absolute;
 	left:190px;
 	scrollbars:none;
@@ -346,7 +346,7 @@ h1
 	scrollbars:none;
 	overflow:visible;
 	width:80%;
-}
+} */
 #errorbox {
 	position:absolute;
 	left:190px;

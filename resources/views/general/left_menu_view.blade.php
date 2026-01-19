@@ -1,5 +1,5 @@
-<div id="menu" class="left_menu">
-    <div class="w-32 m-auto mt-0">
+<div class="menu-container flex flex-col items-center py-4">
+    <div class="">
             {{ $lm_players }} <strong>{!! $user_name !!}</strong>
     </div>
     <table width="110" cellspacing="0" cellpadding="0">

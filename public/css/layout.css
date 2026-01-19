@@ -1,0 +1,40 @@
+.main-container {
+  display: grid;
+  height: 100vh; /* 或其他合适高度 */
+}
+
+/* 大屏幕：左侧 menu，右侧 header + content */
+@media (min-width: 1440px) {
+  /* 假设断点 */
+  .main-container {
+    grid-template-areas:
+      "menu-container header-container"
+      "menu-container content-container";
+    grid-template-columns: 200px 1fr; /* menu 固定宽度 200px */
+    grid-template-rows: auto 1fr; /* header 自动高度，content 填充剩余 */
+  }
+}
+
+/* 小屏幕：垂直堆叠 */
+@media (max-width: 1439px) {
+  .main-container {
+    grid-template-areas:
+      "header-container"
+      "content-container"
+      "menu-container";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto; /* header 自动，content 填充，menu 固定高度 */
+  }
+}
+
+.header-container {
+  grid-area: header-container;
+} /* 固定高度 */
+.content-container {
+  grid-area: content-container;
+  overflow-x: auto; /* 允许水平滚动，防止内容超出屏幕宽度 */
+  overflow-y: auto; /* 如果需要，也允许垂直滚动 */
+}
+.menu-container {
+  grid-area: menu-container;
+}

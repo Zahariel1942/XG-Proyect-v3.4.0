@@ -7,7 +7,6 @@
 #   ./build-css.sh watch    # 监听模式
 
 TAILWIND_CLI="./tailwindcss"
-INPUT_CSS="./public/css/input.css"
 OUTPUT_CSS="./public/css/tailwind.css"
 
 # 检查 TailwindCSS CLI 是否存在
@@ -25,9 +24,9 @@ fi
 # 判断是否为监听模式
 if [ "$1" = "watch" ]; then
     echo "🎨 启动 TailwindCSS 监听模式..."
-    $TAILWIND_CLI -i $INPUT_CSS -o $OUTPUT_CSS --watch
+    $TAILWIND_CLI -o $OUTPUT_CSS -c tailwind.config.js --watch
 else
     echo "🎨 构建 TailwindCSS..."
-    $TAILWIND_CLI -i $INPUT_CSS -o $OUTPUT_CSS --minify
+    $TAILWIND_CLI -o $OUTPUT_CSS -c tailwind.config.js
     echo "✅ 构建完成: $OUTPUT_CSS"
 fi

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="XG Proyect {{ $version }}" />
         <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="{{ $css_path }}layout.css">
         <link rel="stylesheet" type="text/css" href="{{ $css_path }}tailwind.css">
         <link rel="stylesheet" type="text/css" href="{{ $css_path }}default.css">
         <link rel="stylesheet" type="text/css" href="{{ $css_path }}redesign.css">
@@ -13,7 +14,9 @@
         <link rel="stylesheet" type="text/css" href="{{ $skin_path }}formate.css">
         <script type="text/javascript" src="{{ $js_path }}overlib-min.js"></script>
         <script type="text/javascript" src="{{ $js_path }}general.js"></script>
-        <script type="importmap">{"imports": {"lit": "{{ $js_path }}lit-core.min.js"}}</script>
+        <script type="importmap">{"imports": {"lit": "./{{ $js_path }}lit-core.min.js"}}</script>
+        <script type="module" src="{{ $js_path }}components/index.js"></script>
         {!! $meta_tags !!}
     </head>
-    <body>
+    <body class="main-container">
+        <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>

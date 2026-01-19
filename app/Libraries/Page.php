@@ -87,12 +87,12 @@ class Page
         if ($page == '') {
             $page .= $this->gameHeader($metatags);
             $page .= $topnav ? $this->gameNavbar() : ''; // TOP NAVIGATION BAR
-            $page .= $menu ? $this->gameMenu() : ''; // MENU
+            // $page .= $menu ? $this->gameMenu() : ''; // MENU
         }
 
         // Merge: Header + Topnav + Menu + Page
         if (!defined('IN_INSTALL')) {
-            $page .= "\n<center>\n" . $current_page . "\n</center>\n";
+            $page .= "\n<div class=\"content-container flex justify-center\">\n" . $current_page . "\n</div>\n";
         } else {
             if (defined('IN_MESSAGE')) {
                 $page .= "\n<center>\n" . $current_page . "\n</center>\n";
@@ -100,6 +100,7 @@ class Page
                 $page .= $current_page;
             }
         }
+        $page .= $menu ? $this->gameMenu() : ''; // MENU
 
         // Footer
         if (!defined('IN_INSTALL') && !defined('IN_LOGIN')) {
@@ -478,9 +479,8 @@ class Page
 
         // When vacation mode did not expire
         if ($this->current_user['preference_vacation_mode'] > 0) {
-            $parse['color'] = '#1DF0F0';
+            $parse['type'] = 'info';
             $parse['message'] = $lang->line('tn_vacation_mode') . Timing::formatExtendedDate($this->current_user['preference_vacation_mode']);
-            $parse['jump_line'] = '<br/>';
 
             $parse['show_umod_notice'] = $this->template->set(
                 'general/notices_view',
@@ -490,9 +490,8 @@ class Page
 
         if ($this->current_user['preference_delete_mode'] > 0) {
             // When it is in delete mode
-            $parse['color'] = '#FF0000';
+            $parse['type'] = 'warning';
             $parse['message'] = $lang->line('tn_delete_mode') . Timing::formatExtendedDate($this->current_user['preference_delete_mode'] + (60 * 60 * 24 * 7));
-            $parse['jump_line'] = '';
 
             $parse['show_umod_notice'] = $this->template->set(
                 'general/notices_view',
@@ -728,38 +727,26 @@ class Page
         $lang = $this->langs->loadLang('game/global', true);
 
         $db = new Database();
-        $list = '';
-        $user_planets = $this->sortPlanets();
+        $planetList = [];
+        $userPlanets = $this->sortPlanets();
 
-        $page = isset($_GET['page']) ? $_GET['page'] : '';
-        $gid = isset($_GET['gid']) ? $_GET['gid'] : '';
-        $mode = isset($_GET['mode']) ? $_GET['mode'] : '';
-
-        if ($user_planets) {
-            while ($planets = $db->fetchArray($user_planets)) {
-                $list .= "\n<option ";
-                $list .= (($planets['planet_id'] == $this->current_user['user_current_planet']) ?
-                    'selected="selected" ' : '');
-
-                $list .= 'value="game.php?page=' . $page . '&gid=' .
-                    $gid . '&cp=' . $planets['planet_id'] . '';
-                $list .= '&amp;mode=' . $mode;
-                $list .= '&amp;re=0">';
-
-                $list .= (($planets['planet_type'] != PlanetTypesEnumerator::MOON) ? $planets['planet_name'] : $planets['planet_name'] . ' (' . $lang->line('moon') . ')');
-                $list .= '&nbsp;[' . $planets['planet_galaxy'] . ':';
-                $list .= $planets['planet_system'] . ':';
-                $list .= $planets['planet_planet'];
-                $list .= ']&nbsp;&nbsp;</option>';
+        if ($userPlanets) {
+            while ($planets = $db->fetchArray($userPlanets)) {
+                $planetList[] = [
+                    'id' => $planets['planet_id'],
+                    'name' => ($planets['planet_type'] != PlanetTypesEnumerator::MOON) ? $planets['planet_name'] : $planets['planet_name'] . ' (' . $lang->line('moon') . ')',
+                    'coordinates' => [
+                        'galaxy' => $planets['planet_galaxy'],
+                        'system' => $planets['planet_system'],
+                        'planet' => $planets['planet_planet'],
+                    ],
+                    'current' => $planets['planet_id'] == $this->current_user['user_current_planet'],
+                ];
             }
         }
 
-        // IF THE LIST OF PLANETS IS EMPTY WE SHOULD RETURN false
-        if ($list !== '') {
-            return $list;
-        } else {
-            return false;
-        }
+        // Return empty array if no planets found
+        return json_encode($planetList);
     }
 
     /**
