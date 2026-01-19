@@ -122,12 +122,15 @@ class Expedition extends Missions
     {
         $priceList = Objects::getInstance()->getPrice();
         $expeditionPoints = 0;
+        $shipExpeditionPoints = 0;
+        $shipsPoints = $this->fmlExpedition->getShipsPoints();
 
         foreach (FleetsLib::getFleetShipsArray($fleet['fleet_array']) as $id => $count) {
             if (in_array($id, $this->fmlExpedition->getPossibleShips())) {
                 $expeditionPoints += $this->fmlExpedition->calculateExpeditionPoints(
                     ($priceList[$id]['metal'] + $priceList[$id]['crystal'])
                 ) * $count;
+                $shipExpeditionPoints += $shipsPoints[$id] * $count;
             }
 
             $this->fleetCapacity += FleetsLib::getMaxStorage(
@@ -141,21 +144,13 @@ class Expedition extends Missions
         $maxResourceFindExpeditionPoints = $this->fmlExpedition->getMaxExpeditionPoints(
             $topPlayerPoints
         );
-        $maxShipsFindExpeditionPoints = $this->fmlExpedition->getMaxShipsExpeditionPoints(
-            $topPlayerPoints
-        );
 
         $this->resourceExpeditionPoints = $expeditionPoints;
-        $this->shipExpeditionPoints = $expeditionPoints;
+        $this->shipExpeditionPoints = $shipExpeditionPoints;
 
         // limit the amount of resources that can be found
         if ($expeditionPoints > $maxResourceFindExpeditionPoints) {
             $this->resourceExpeditionPoints = $maxResourceFindExpeditionPoints;
-        }
-
-        // limit the amount of ships that can be found
-        if ($expeditionPoints > $maxShipsFindExpeditionPoints) {
-            $this->shipExpeditionPoints = $maxShipsFindExpeditionPoints;
         }
     }
 

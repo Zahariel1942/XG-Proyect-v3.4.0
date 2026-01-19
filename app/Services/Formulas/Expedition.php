@@ -40,11 +40,6 @@ class Expedition
         return 25000;
     }
 
-    public function getMaxShipsExpeditionPoints(int $topPlayerPoints): int
-    {
-        return $this->getMaxExpeditionPoints($topPlayerPoints) * 100;
-    }
-
     public function calculateExpeditionPoints(int $structuralIntegrity): int
     {
         return ($structuralIntegrity * 5 / 1000);
@@ -203,10 +198,37 @@ class Expedition
             205, // ship_heavy_fighter
             206, // ship_cruiser
             207, // ship_battleship
+            208, // ship_colony_ship
+            209, // ship_recycler
             210, // ship_espionage_probe
             211, // ship_bomber
+            212, // ship_solar_satellite
             213, // ship_destroyer
+            214, // ship_deathstar
             215, // ship_battlecruiser
+        ];
+    }
+
+    /**
+     * Only these ships are obtainable on an expedition
+     */
+    public function getShipsPoints(): array
+    {
+        return [
+            202 => 1.0, // ship_small_cargo_ship
+            203 => 1.5, // ship_big_cargo_ship
+            204 => 0.5, // ship_light_fighter
+            205 => 1.5, // ship_heavy_fighter
+            206 => 2.0, // ship_cruiser
+            207 => 2.5, // ship_battleship
+            208 => 0.5, // ship_colony_ship
+            209 => 1.0, // ship_recycler
+            210 => 0.01, // ship_espionage_probe
+            211 => 3.0, // ship_bomber
+            212 => 0.0, // ship_solar_satellite
+            213 => 3.5, // ship_destroyer
+            214 => 5.0, // ship_deathstar
+            215 => 3.2, // ship_battlecruiser
         ];
     }
 
@@ -222,9 +244,13 @@ class Expedition
             205 => 0.5, // ship_heavy_fighter
             206 => 0.25, // ship_cruiser
             207 => 0.125, // ship_battleship
+            208 => 0.5, // ship_colony_ship
+            209 => 0.1, // ship_recycler
             210 => 0.1, // ship_espionage_probe
             211 => 0.0625, // ship_bomber
+            212 => 0.0, // ship_solar_satellite
             213 => 0.0625, // ship_destroyer
+            214 => 0.03125, // ship_deathstar
             215 => 0.0625, // ship_battlecruiser
         ];
     }
