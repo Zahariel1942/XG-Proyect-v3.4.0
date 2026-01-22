@@ -271,7 +271,7 @@
 	</div>
 	<div id="footer">
 	    <div id="footerContent">
-            <p id="copyright">Powered by <a href="https://xgproyect.org/" target="_blank" title="XG Proyect {version}">XG Proyect</a> © 2008 - {year}.</p>
+            <p id="copyright"><a href="https://beian.miit.gov.cn" target="_blank">京ICP备2022033654号-1</a></p>
         </div>
 	</div>
 
